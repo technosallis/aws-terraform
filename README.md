@@ -1,1 +1,1 @@
-echo # aws-terraform
+# aws-terraform
