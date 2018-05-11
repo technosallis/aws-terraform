@@ -1,4 +1,32 @@
-variable "server_port" {
-  description = "The port the server will use for HTTP requests"
-  default = 8080
+variable "region" {
+  default = "eu-west-2"
+}
+variable "AmiLinux" {
+  type = "map"
+  default = {
+    eu-west-1 = "ami-9cbe9be5"
+    eu-west-2 = "ami-c12dcda6"
+    eu-west-3 = "ami-cae150b7"
+  }
+  description = "I added only 3 regions (Ireland, London, Paris) to utilize the map feature, more can be added"
+}
+variable "vpc-fullcidr" {
+    default = "172.31.0.0/16"
+  description = "the vpc cdir"
+}
+variable "Subnet-Public-CIDR" {
+  default = "172.31.0.0/24"
+  description = "the cidr of the public subnet"
+}
+variable "Subnet-Private-CIDR" {
+  default = "172.31.3.0/24"
+  description = "the cidr of the private subnet"
+}
+variable "key_name" {
+  default = "serviceuser"
+  description = "the ssh key to use in the EC2 machines"
+}
+variable "DnsZoneName" {
+  default = "technosallis.internal"
+  description = "the internal dns name"
 }
