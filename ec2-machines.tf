@@ -37,7 +37,7 @@ resource "aws_instance" "database" {
   user_data = <<HEREDOC
   #!/bin/bash
   yum update -y
-  yum install -y mysql56-server
+  yum install -y mysql55-server
   service mysqld start
   /usr/bin/mysqladmin -u root password 'secret'
   mysql -u root -psecret -e "create user 'root'@'%' identified by 'secret';" mysql
