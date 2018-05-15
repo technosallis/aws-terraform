@@ -1,6 +1,6 @@
 resource "aws_subnet" "PublicAZA" {
   vpc_id = "${aws_vpc.terraformmain.id}"
-  cidr_block = "${var.Subnet-Public-CIDR}"
+  cidr_block = "${var.Subnet-Public-AzA-CIDR}"
   tags {
         Name = "PublicAZA"
   }
@@ -12,7 +12,7 @@ resource "aws_route_table_association" "PublicAZA" {
 }
 resource "aws_subnet" "PrivateAZA" {
   vpc_id = "${aws_vpc.terraformmain.id}"
-  cidr_block = "${var.Subnet-Private-CIDR}"
+  cidr_block = "${var.Subnet-Private-AzA-CIDR}"
   tags {
         Name = "PublicAZB"
   }

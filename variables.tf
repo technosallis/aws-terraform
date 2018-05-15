@@ -14,11 +14,11 @@ variable "vpc-fullcidr" {
     default = "172.31.0.0/16"
   description = "the vpc cdir"
 }
-variable "Subnet-Public-CIDR" {
+variable "Subnet-Public-AzA-CIDR" {
   default = "172.31.0.0/24"
   description = "the cidr of the public subnet"
 }
-variable "Subnet-Private-CIDR" {
+variable "Subnet-Private-AzA-CIDR" {
   default = "172.31.3.0/24"
   description = "the cidr of the private subnet"
 }
