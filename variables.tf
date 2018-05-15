@@ -1,12 +1,16 @@
 variable "region" {
   default = "eu-west-2"
 }
-variable "AmiLinux" {
+variable "currentdb" {
+  default = "database"
+}
+variable "AmiLinux" {i
   type = "map"
   default = {
     eu-west-1 = "ami-9cbe9be5"
     eu-west-2 = "ami-c12dcda6"
     eu-west-3 = "ami-cae150b7"
+    database = "ami-018225b80a5ec0b98"
   }
   description = "I added only 3 regions (Ireland, London, Paris) to utilize the map feature, more can be added"
 }
