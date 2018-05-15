@@ -11,15 +11,15 @@ variable "AmiLinux" {
   description = "I added only 3 regions (Ireland, London, Paris) to utilize the map feature, more can be added"
 }
 variable "vpc-fullcidr" {
-    default = "172.31.0.0/16"
+    default = "172.28.0.0/16"
   description = "the vpc cdir"
 }
 variable "Subnet-Public-AzA-CIDR" {
-  default = "172.31.0.0/24"
+  default = "172.28.0.0/24"
   description = "the cidr of the public subnet"
 }
 variable "Subnet-Private-AzA-CIDR" {
-  default = "172.31.3.0/24"
+  default = "172.28.3.0/24"
   description = "the cidr of the private subnet"
 }
 variable "key_name" {
